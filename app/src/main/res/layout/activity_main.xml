@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switcher"
+        app:layout_constraintBottom_toTopOf="@+id/btConvert"
+        app:layout_constraintEnd_toEndOf="@+id/btConvert"
+        app:layout_constraintStart_toStartOf="@+id/btConvert"
+        app:layout_constraintTop_toBottomOf="@+id/rgStart"
+        app:layout_constraintVertical_bias="0.06999999" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/teFinish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/teaspoon"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/btConvert"
+        app:layout_constraintStart_toEndOf="@+id/btSwitch"
+        app:layout_constraintTop_toTopOf="@+id/btSwitch"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/teStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/cup"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/btSwitch"
+        app:layout_constraintStart_toStartOf="@+id/btConvert"
+        app:layout_constraintTop_toTopOf="@+id/btSwitch" />
+
+    <Button
+        android:id="@+id/btConvert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <RadioGroup
+        android:id="@+id/rgStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btConvert"
+        app:layout_constraintStart_toStartOf="@+id/btConvert"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002">
+
+        <RadioButton
+            android:id="@+id/rbTeaspoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/teaspoon" />
+
+        <RadioButton
+            android:id="@+id/rbTablespoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tablespoon" />
+
+        <RadioButton
+            android:id="@+id/rbCup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cup" />
+
+        <RadioButton
+            android:id="@+id/rbPint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pint" />
+
+        <RadioButton
+            android:id="@+id/rbFluidOunce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fluid_ounce" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/teStart"
+        app:layout_constraintEnd_toStartOf="@+id/rgStart"
+        app:layout_constraintStart_toStartOf="@+id/teStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/teFinish"
+        app:layout_constraintEnd_toEndOf="@+id/teFinish"
+        app:layout_constraintStart_toEndOf="@+id/rgStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
