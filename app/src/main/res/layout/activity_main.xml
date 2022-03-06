@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btConvert"
         app:layout_constraintStart_toStartOf="@+id/btConvert"
         app:layout_constraintTop_toBottomOf="@+id/rgStart"
-        app:layout_constraintVertical_bias="0.06999999" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/teFinish"
@@ -34,6 +34,7 @@
         android:id="@+id/teStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
         android:hint="@string/cup"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
@@ -59,7 +60,6 @@
         android:id="@+id/rgStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btConvert"
         app:layout_constraintStart_toStartOf="@+id/btConvert"
@@ -82,6 +82,7 @@
             android:id="@+id/rbCup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/cup" />
 
         <RadioButton
@@ -96,26 +97,6 @@
             android:layout_height="wrap_content"
             android:text="@string/fluid_ounce" />
     </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/teStart"
-        app:layout_constraintEnd_toStartOf="@+id/rgStart"
-        app:layout_constraintStart_toStartOf="@+id/teStart"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/teFinish"
-        app:layout_constraintEnd_toEndOf="@+id/teFinish"
-        app:layout_constraintStart_toEndOf="@+id/rgStart"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
